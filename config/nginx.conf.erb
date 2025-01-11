@@ -3,6 +3,8 @@ events { worker_connections 1024; }
 http {
     server {
         listen <%= ENV["PORT"] %>;
+        server_name deepthought.com.au;
+
         root /app;
         location / {
             index index.html;
